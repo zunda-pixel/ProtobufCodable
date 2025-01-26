@@ -9,9 +9,6 @@ final class EnumEncoder: AbstractEncodingNode, SingleValueEncodingContainer {
     }
 
     func encode(_ value: Int) throws {
-        guard value <= Int32.max && value >= Int32.min else {
-            throw EncodingError.unsupported(value, "Enum value must be in the range of Int32", codingPath: codingPath)
-        }
         self.encodedValue = value
     }
 
@@ -20,9 +17,6 @@ final class EnumEncoder: AbstractEncodingNode, SingleValueEncodingContainer {
     }
 
     func encode(_ value: Int64) throws {
-        guard value <= Int32.max && value >= Int32.min else {
-            throw EncodingError.unsupported(value, "Enum value must be in the range of Int32", codingPath: codingPath)
-        }
         self.encodedValue = value
     }
 
