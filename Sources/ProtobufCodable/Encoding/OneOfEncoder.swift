@@ -15,7 +15,7 @@ final class OneOfEncoder: AbstractEncodingNode, Encoder {
     }
 
     func singleValueContainer() -> SingleValueEncodingContainer {
-        UnsupportedValueEncoder("Single value container is not supported for OneOf")
+		return EnumEncoder(codingPath: codingPath, userInfo: userInfo)
     }
 
     var encodedValue: EncodableContainer? {
