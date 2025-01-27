@@ -19,6 +19,14 @@ final class EnumEncoder: AbstractEncodingNode, SingleValueEncodingContainer {
     func encode(_ value: Int64) throws {
         self.encodedValue = value
     }
+	
+	func encode(_ value: Double) throws {
+		self.encodedValue = value
+	}
+	
+	func encode(_ value: Float) throws {
+		self.encodedValue = value
+	}
 
     func encode(_ value: String) throws {
         self.encodedValue = value
